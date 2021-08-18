@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema path="/com/github/tsitokhtsev/themer/" id="com.github.tsitokhtsev.themer">
+        <key name="pos-x" type="i">
+            <default>360</default>
+            <summary>Horizontal position</summary>
+            <description>The saved horizontal position of app window</description>
+        </key>
+
+        <key name="pos-y" type="i">
+            <default>360</default>
+            <summary>Vertival position</summary>
+            <description>The saved vertical position of app window</description>
+        </key>
+
+        <key name="window-width" type="i">
+            <default>700</default>
+            <summary>Window width</summary>
+            <description>The saved width of app window</description>
+        </key>
+
+        <key name="window-height" type="i">
+            <default>500</default>
+            <summary>The saved height of app window</summary>
+            <description></description>
+        </key>
+    </schema>
+</schemalist>

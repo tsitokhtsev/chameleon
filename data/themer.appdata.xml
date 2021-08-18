@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2021 Gregory Tsitokhtsev <tsitokhtsev2002@gmail.com> -->
+<component type="desktop">
+    <id>com.github.tsitokhtsev.themer</id>
+    <metadata_license>CC0</metadata_license>
+    <name>Themer</name>
+    <summary>Change flatpak themes</summary>
+    <description>
+        <p>This app is made to change flatpak theme depending on app platform</p>
+    </description>
+</component>
