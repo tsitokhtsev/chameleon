@@ -7,6 +7,7 @@ public class Themer.ThemesMenu : Gtk.Box {
         
         theme_selector = new Gtk.ComboBoxText ();
         var themes_list = get_themes ();
+        theme_selector.append_text ("Adwaita");
         themes_list.foreach (theme => {
             theme_selector.append_text (theme);
         });
