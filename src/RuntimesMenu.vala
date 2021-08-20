@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2021 Gregory Tsitokhtsev <tsitokhtsev2002@gmail.com>
+ */
+
 public class Themer.RuntimesMenu : Gtk.Box {
     public Gtk.ComboBoxText runtime_selector;
 
@@ -8,7 +13,7 @@ public class Themer.RuntimesMenu : Gtk.Box {
         runtime_selector = new Gtk.ComboBoxText ();
         runtime_selector.append_text ("org.gnome");
         runtime_selector.append_text ("org.kde");
-        //  runtime_selector.append_text ("io.elementary");
+        // runtime_selector.append_text ("io.elementary");
         runtime_selector.set_active (0);
 
         pack_start (new Gtk.Label ("Select Runtime"), false, false, 0);

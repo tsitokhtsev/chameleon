@@ -1,10 +1,15 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2021 Gregory Tsitokhtsev <tsitokhtsev2002@gmail.com>
+ */
+
 public class Themer.ThemesMenu : Gtk.Box {
     public Gtk.ComboBoxText theme_selector;
 
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
         border_width = 12;
-        
+
         theme_selector = new Gtk.ComboBoxText ();
         var themes_list = get_themes ();
         theme_selector.append_text ("Adwaita");
@@ -19,7 +24,7 @@ public class Themer.ThemesMenu : Gtk.Box {
 
     public List<string> get_themes () {
         var themes_list = new List<string> ();
-        var themes_path  = Environment.get_home_dir () + "/.local/share/flatpak/runtime/";
+        var themes_path = Environment.get_home_dir () + "/.local/share/flatpak/runtime/";
         var themes_folder = File.new_for_path (themes_path);
 
         try {
@@ -29,11 +34,11 @@ public class Themer.ThemesMenu : Gtk.Box {
             while ((file_info = enumerator.next_file ()) != null) {
                 var name = file_info.get_name ();
 
-                //  var theme = File.new_for_path (themes_path + name + "/gtk-3.0");
-                //  var icons = File.new_for_path (themes_path + name + "/48x48/gtk-3.0");
-                //  if ((theme.query_exists () || icons.query_exists ()) && themes_list.find (name) == null) {
-                //      themes_list.append (name);
-                //  }
+                // var theme = File.new_for_path (themes_path + name + "/gtk-3.0");
+                // var icons = File.new_for_path (themes_path + name + "/48x48/gtk-3.0");
+                // if ((theme.query_exists () || icons.query_exists ()) && themes_list.find (name) == null) {
+                // themes_list.append (name);
+                // }
 
                 if (name.contains ("org.gtk.Gtk3theme.")) {
                     name = name.replace ("org.gtk.Gtk3theme.", "");
