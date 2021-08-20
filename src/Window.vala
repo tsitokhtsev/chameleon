@@ -36,8 +36,8 @@ public class Themer.Window : Gtk.ApplicationWindow {
         list_box.add (themes_menu);
         box.add (list_box);
 
-        var apply_button = new Gtk.Button.with_label ("Apply");
-        var reset_button = new Gtk.Button.with_label ("Reset");
+        var apply_button = new Gtk.Button.with_label (_("Apply"));
+        var reset_button = new Gtk.Button.with_label (_("Reset"));
 
         apply_button.get_style_context ().add_class ("suggested-action");
         apply_button.clicked.connect (() => {

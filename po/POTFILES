@@ -1,0 +1,5 @@
+src/Window.vala
+src/RuntimesMenu.vala
+src/ThemesMenu.vala
+data/themer.desktop.in
+data/themer.appdata.xml.in

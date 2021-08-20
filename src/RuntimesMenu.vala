@@ -16,7 +16,7 @@ public class Themer.RuntimesMenu : Gtk.Box {
         // runtime_selector.append_text ("io.elementary");
         runtime_selector.set_active (0);
 
-        pack_start (new Gtk.Label ("Select Runtime"), false, false, 0);
+        pack_start (new Gtk.Label (_("Select Runtime")), false, false, 0);
         pack_end (runtime_selector, false, false, 0);
     }
 

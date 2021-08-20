@@ -18,7 +18,7 @@ public class Themer.ThemesMenu : Gtk.Box {
         });
         theme_selector.set_active (0);
 
-        pack_start (new Gtk.Label ("Select Theme"), false, false, 0);
+        pack_start (new Gtk.Label (_("Select Theme")), false, false, 0);
         pack_end (theme_selector, false, false, 0);
     }
 

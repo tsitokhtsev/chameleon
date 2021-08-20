@@ -17,25 +17,38 @@ executable(
     install: true
 )
 
-# Install our .desktop file so the Applications Menu will see it
-install_data(
-    'data' / 'themer.desktop',
-    install_dir: get_option('datadir') / 'applications',
-    rename: meson.project_name() + '.desktop'
+# Include the translations module
+i18n = import('i18n')
+
+# Set our translation domain
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+
+#Translate and install our .desktop file
+i18n.merge_file(
+    input: 'data' / 'themer.desktop.in',
+    output: meson.project_name() + '.desktop',
+    po_dir: meson.source_root() / 'po',
+    type: 'desktop',
+    install: true,
+    install_dir: get_option('datadir') / 'applications'
 )
 
-# Install our .appdata.xml file so AppCenter will see it
-install_data(
-    'data' / 'themer.appdata.xml',
-    install_dir: get_option('datadir') / 'metainfo',
-    rename: meson.project_name() + '.appdata.xml'
+#Translate and install our .appdata file
+i18n.merge_file(
+    input: 'data' / 'themer.appdata.xml.in',
+    output: meson.project_name() + '.appdata.xml',
+    po_dir: meson.source_root() / 'po',
+    install: true,
+    install_dir: get_option('datadir') / 'metainfo'
 )
 
 # Install our gschema.xml
 install_data(
     'data' / 'gschema.xml',
-    install_dir: join_paths (get_option ('datadir'), 'glib-2.0', 'schemas'),
+    install_dir: get_option ('datadir') / 'glib-2.0' / 'schemas',
     rename: meson.project_name () + '.gschema.xml'
 )
 
 meson.add_install_script('meson/post_install.py')
+
+subdir('po')

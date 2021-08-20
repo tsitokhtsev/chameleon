@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Themer
+GenericName=Theme Chooser
+Comment=Apply themes to flatpak apps
+Categories=Utility;Settings;DesktopSettings;
+Exec=com.github.tsitokhtsev.themer
+Icon=com.github.tsitokhtsev.themer
+Terminal=false
+Type=Application
+Keywords=Themer;Theme;Customization;Flatpak;
