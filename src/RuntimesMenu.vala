@@ -6,9 +6,9 @@ public class Themer.RuntimesMenu : Gtk.Box {
         border_width = 12;
 
         runtime_selector = new Gtk.ComboBoxText ();
-        runtime_selector.append_text ("io.elementary");
         runtime_selector.append_text ("org.gnome");
         runtime_selector.append_text ("org.kde");
+        //  runtime_selector.append_text ("io.elementary");
         runtime_selector.set_active (0);
 
         pack_start (new Gtk.Label ("Select Runtime"), false, false, 0);
