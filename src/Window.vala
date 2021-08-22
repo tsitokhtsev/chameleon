@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021 Gregory Tsitokhtsev <tsitokhtsev2002@gmail.com>
  */
 
-public class Themer.Window : Gtk.ApplicationWindow {
+public class Chameleon.Window : Gtk.ApplicationWindow {
     public GLib.Settings settings;
 
     public Window (Application application) {
@@ -16,17 +16,17 @@ public class Themer.Window : Gtk.ApplicationWindow {
         default_width = 400;
         this.get_style_context ().add_class ("rounded");
 
-        settings = new GLib.Settings ("com.github.tsitokhtsev.themer");
+        settings = new GLib.Settings ("com.github.tsitokhtsev.chameleon");
 
-        var header_bar = new Themer.HeaderBar ();
+        var header_bar = new Chameleon.HeaderBar ();
         set_titlebar (header_bar);
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
             border_width = 12
         };
 
-        var runtimes_menu = new Themer.RuntimesMenu ();
-        var themes_menu = new Themer.ThemesMenu ();
+        var runtimes_menu = new Chameleon.RuntimesMenu ();
+        var themes_menu = new Chameleon.ThemesMenu ();
 
         var list_box = new Gtk.ListBox () {
             selection_mode = Gtk.SelectionMode.NONE

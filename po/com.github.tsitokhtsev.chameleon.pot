@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.tsitokhtsev.themer package.
+# This file is distributed under the same license as the com.github.tsitokhtsev.chameleon package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.tsitokhtsev.themer\n"
+"Project-Id-Version: com.github.tsitokhtsev.chameleon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 22:06+0400\n"
+"POT-Creation-Date: 2021-08-22 19:17+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,26 +34,26 @@ msgstr ""
 msgid "Select Theme"
 msgstr ""
 
-#: data/themer.desktop.in:3 data/themer.appdata.xml.in:6
-msgid "Themer"
+#: data/chameleon.desktop.in:3 data/chameleon.appdata.xml.in:6
+msgid "Chameleon"
 msgstr ""
 
-#: data/themer.desktop.in:4
+#: data/chameleon.desktop.in:4
 msgid "Theme Chooser"
 msgstr ""
 
-#: data/themer.desktop.in:5 data/themer.appdata.xml.in:7
+#: data/chameleon.desktop.in:5 data/chameleon.appdata.xml.in:7
 msgid "Apply themes to flatpak apps"
 msgstr ""
 
-#: data/themer.desktop.in:8
-msgid "com.github.tsitokhtsev.themer"
+#: data/chameleon.desktop.in:8
+msgid "com.github.tsitokhtsev.chameleon"
 msgstr ""
 
-#: data/themer.desktop.in:11
-msgid "Themer;Theme;Customization;Flatpak;"
+#: data/chameleon.desktop.in:11
+msgid "Chameleon;Theme;Customization;Flatpak;"
 msgstr ""
 
-#: data/themer.appdata.xml.in:9
-msgid "Using Themer, you can apply themes to flatpak apps"
+#: data/chameleon.appdata.xml.in:9
+msgid "Using Chameleon, you can apply themes to flatpak apps"
 msgstr ""

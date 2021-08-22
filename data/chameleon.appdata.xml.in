@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2021 Gregory Tsitokhtsev <tsitokhtsev2002@gmail.com> -->
 <component type="desktop">
-    <id>com.github.tsitokhtsev.themer</id>
+    <id>com.github.tsitokhtsev.chameleon</id>
     <metadata_license>CC0</metadata_license>
-    <name>Themer</name>
+    <name>Chameleon</name>
     <summary>Apply themes to flatpak apps</summary>
     <description>
-        <p>Using Themer, you can apply themes to flatpak apps</p>
+        <p>Using Chameleon, you can apply themes to flatpak apps</p>
     </description>
 </component>

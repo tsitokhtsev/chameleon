@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021 Gregory Tsitokhtsev <tsitokhtsev2002@gmail.com>
  */
 
-public class Themer.ThemesMenu : Gtk.Box {
+public class Chameleon.ThemesMenu : Gtk.Box {
     public Gtk.ComboBoxText theme_selector;
 
     construct {

@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Themer
+Name=Chameleon
 GenericName=Theme Chooser
 Comment=Apply themes to flatpak apps
 Categories=Utility;Settings;DesktopSettings;
-Exec=com.github.tsitokhtsev.themer
-Icon=com.github.tsitokhtsev.themer
+Exec=com.github.tsitokhtsev.chameleon
+Icon=com.github.tsitokhtsev.chameleon
 Terminal=false
 Type=Application
-Keywords=Themer;Theme;Customization;Flatpak;
+Keywords=Chameleon;Theme;Customization;Flatpak;

@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021 Gregory Tsitokhtsev <tsitokhtsev2002@gmail.com>
  */
 
-public class Themer.RuntimesMenu : Gtk.Box {
+public class Chameleon.RuntimesMenu : Gtk.Box {
     public Gtk.ComboBoxText runtime_selector;
 
     construct {

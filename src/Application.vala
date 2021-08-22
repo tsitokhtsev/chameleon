@@ -6,7 +6,7 @@
 public class Application : Gtk.Application {
     public Application () {
         Object (
-            application_id: "com.github.tsitokhtsev.themer",
+            application_id: "com.github.tsitokhtsev.chameleon",
             flags : ApplicationFlags.FLAGS_NONE
         );
     }
@@ -20,7 +20,7 @@ public class Application : Gtk.Application {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
 
-        var window = new Themer.Window (this);
+        var window = new Chameleon.Window (this);
         add_window (window);
     }
 }

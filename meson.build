@@ -1,5 +1,5 @@
 # project name and programming language
-project('com.github.tsitokhtsev.themer', 'vala', 'c')
+project('com.github.tsitokhtsev.chameleon', 'vala', 'c')
 
 # Include the translations module
 i18n = import('i18n')
@@ -25,7 +25,7 @@ executable(
 
 #Translate and install our .desktop file
 i18n.merge_file(
-    input: 'data' / 'themer.desktop.in',
+    input: 'data' / 'chameleon.desktop.in',
     output: meson.project_name() + '.desktop',
     po_dir: meson.source_root() / 'po',
     type: 'desktop',
@@ -38,12 +38,12 @@ icon_sizes = ['16', '24', '32', '48', '64', '128']
 
 foreach i : icon_sizes
     install_data(
-        'data' / i + '.svg',
+        'data' / 'icons' / i + '.svg',
         install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
         rename: meson.project_name() + '.svg'
     )
     install_data(
-        'data' / i + '.svg',
+        'data' / 'icons' / i + '.svg',
         install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
         rename: meson.project_name() + '.svg'
     )
@@ -51,7 +51,7 @@ endforeach
 
 #Translate and install our .appdata file
 i18n.merge_file(
-    input: 'data' / 'themer.appdata.xml.in',
+    input: 'data' / 'chameleon.appdata.xml.in',
     output: meson.project_name() + '.appdata.xml',
     po_dir: meson.source_root() / 'po',
     install: true,

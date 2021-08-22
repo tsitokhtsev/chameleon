@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-    <schema path="/com/github/tsitokhtsev/themer/" id="com.github.tsitokhtsev.themer">
+    <schema path="/com/github/tsitokhtsev/chameleon/" id="com.github.tsitokhtsev.chameleon">
         <key name="pos-x" type="i">
             <default>360</default>
             <summary>Horizontal position</summary>
