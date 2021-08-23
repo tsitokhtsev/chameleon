@@ -15,7 +15,7 @@ executable(
     'src' / 'Window.vala',
     'src' / 'HeaderBar.vala',
     'src' / 'ThemesMenu.vala',
-    'src' / 'RuntimesMenu.vala',
+    'src' / 'PlatformsMenu.vala',
     dependencies: [
         dependency('gtk+-3.0'),
         dependency('granite')

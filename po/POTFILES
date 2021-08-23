@@ -1,5 +1,5 @@
 src/Window.vala
-src/RuntimesMenu.vala
+src/PlatformsMenu.vala
 src/ThemesMenu.vala
 data/chameleon.desktop.in
 data/chameleon.appdata.xml.in

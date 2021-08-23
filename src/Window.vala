@@ -36,14 +36,14 @@ public class Chameleon.Window : Gtk.ApplicationWindow {
         themes_warning.add (warning_label);
         box.add (themes_warning);
 
-        var runtimes_menu = new Chameleon.RuntimesMenu ();
+        var platforms_menu = new Chameleon.PlatformsMenu ();
         var themes_menu = new Chameleon.ThemesMenu ();
 
         var list_box = new Gtk.ListBox () {
             selection_mode = Gtk.SelectionMode.NONE
         };
         list_box.get_style_context ().add_class ("content");
-        list_box.add (runtimes_menu);
+        list_box.add (platforms_menu);
         list_box.add (themes_menu);
         box.add (list_box);
 
@@ -52,13 +52,13 @@ public class Chameleon.Window : Gtk.ApplicationWindow {
 
         apply_button.get_style_context ().add_class ("suggested-action");
         apply_button.clicked.connect (() => {
-            var apps_list = get_apps (runtimes_menu.get_selected_runtime ());
+            var apps_list = get_apps (platforms_menu.get_selected_platform ());
             apply_theme (apps_list, themes_menu.get_selected_theme ());
         });
 
         reset_button.get_style_context ().add_class ("destructive-action");
         reset_button.clicked.connect (() => {
-            var apps_list = get_apps (runtimes_menu.get_selected_runtime ());
+            var apps_list = get_apps (platforms_menu.get_selected_platform ());
             reset_theme (apps_list);
         });
 
@@ -74,11 +74,11 @@ public class Chameleon.Window : Gtk.ApplicationWindow {
         show_all ();
     }
 
-    public List<string> get_apps (string runtime) {
+    public List<string> get_apps (string platform) {
         var apps = new List<string> ();
         var apps_path = Environment.get_home_dir () + "/.local/share/flatpak/app/";
         var apps_folder = File.new_for_path (apps_path);
-        var runtime_string = "runtime=" + runtime;
+        var runtime_string = "runtime=" + platform;
 
         try {
             var enumerator = apps_folder.enumerate_children (FileAttribute.STANDARD_NAME, 0);
