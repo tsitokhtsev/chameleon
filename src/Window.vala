@@ -25,6 +25,17 @@ public class Chameleon.Window : Gtk.ApplicationWindow {
             border_width = 12
         };
 
+        var themes_warning = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        themes_warning.halign = Gtk.Align.CENTER;
+        var warning_icon = new Gtk.Image () {
+            gicon = new ThemedIcon ("dialog-warning-symbolic"),
+            pixel_size = 16
+        };
+        var warning_label = new Gtk.Label ("Theme must be downloaded from Flathub to be displayed");
+        themes_warning.add (warning_icon);
+        themes_warning.add (warning_label);
+        box.add (themes_warning);
+
         var runtimes_menu = new Chameleon.RuntimesMenu ();
         var themes_menu = new Chameleon.ThemesMenu ();
 
