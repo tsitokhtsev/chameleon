@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Chameleon
 GenericName=Theme Chooser
-Comment=Apply themes to flatpak apps
+Comment=Theme your Flatpak apps
 Categories=Utility;Settings;DesktopSettings;
 Exec=com.github.tsitokhtsev.chameleon
 Icon=com.github.tsitokhtsev.chameleon

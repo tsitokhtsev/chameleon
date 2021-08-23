@@ -4,7 +4,7 @@
     <id>com.github.tsitokhtsev.chameleon</id>
     <metadata_license>CC0</metadata_license>
     <name>Chameleon</name>
-    <summary>Apply themes to flatpak apps</summary>
+    <summary>Theme your Flatpak apps</summary>
     <description>
         <p>Using Chameleon, you can apply themes to flatpak apps</p>
     </description>
