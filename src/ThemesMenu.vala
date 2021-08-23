@@ -24,22 +24,15 @@ public class Chameleon.ThemesMenu : Gtk.Box {
 
     public List<string> get_themes () {
         var themes_list = new List<string> ();
-        var themes_path = Environment.get_home_dir () + "/.local/share/flatpak/runtime/";
-        var themes_folder = File.new_for_path (themes_path);
-
         try {
+            var themes_path = Environment.get_home_dir () + "/.local/share/flatpak/runtime";
+            var themes_folder = File.new_for_path (themes_path);
             var enumerator = themes_folder.enumerate_children (FileAttribute.STANDARD_NAME, 0);
             FileInfo file_info;
 
             while ((file_info = enumerator.next_file ()) != null) {
                 var name = file_info.get_name ();
-
-                // var theme = File.new_for_path (themes_path + name + "/gtk-3.0");
-                // var icons = File.new_for_path (themes_path + name + "/48x48/gtk-3.0");
-                // if ((theme.query_exists () || icons.query_exists ()) && themes_list.find (name) == null) {
-                // themes_list.append (name);
-                // }
-
+                
                 if (name.contains ("org.gtk.Gtk3theme.")) {
                     name = name.replace ("org.gtk.Gtk3theme.", "");
                     themes_list.append (name);
