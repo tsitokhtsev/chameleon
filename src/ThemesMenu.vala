@@ -6,10 +6,14 @@
 public class Chameleon.ThemesMenu : Gtk.Box {
     public Gtk.ComboBoxText theme_selector;
 
-    construct {
-        orientation = Gtk.Orientation.HORIZONTAL;
-        border_width = 12;
+    public ThemesMenu () {
+        Object (
+            orientation: Gtk.Orientation.HORIZONTAL,
+            border_width: 12
+        );
+    }
 
+    construct {
         theme_selector = new Gtk.ComboBoxText ();
         var themes_list = get_themes ();
         theme_selector.append_text ("Adwaita");
@@ -32,7 +36,7 @@ public class Chameleon.ThemesMenu : Gtk.Box {
 
             while ((file_info = enumerator.next_file ()) != null) {
                 var name = file_info.get_name ();
-                
+
                 if (name.contains ("org.gtk.Gtk3theme.")) {
                     name = name.replace ("org.gtk.Gtk3theme.", "");
                     themes_list.append (name);

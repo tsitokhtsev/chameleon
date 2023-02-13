@@ -10,5 +10,6 @@ public class Chameleon.HeaderBar : Gtk.HeaderBar {
         show_close_button = true;
         get_style_context ().add_class ("titlebar");
         get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        hexpand = true;
     }
 }

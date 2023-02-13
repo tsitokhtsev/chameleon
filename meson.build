@@ -14,11 +14,14 @@ executable(
     'src' / 'Application.vala',
     'src' / 'Window.vala',
     'src' / 'HeaderBar.vala',
+    'src' / 'MainView.vala',
+    'src' / 'AppsMenu.vala',
     'src' / 'ThemesMenu.vala',
-    'src' / 'PlatformsMenu.vala',
+    'src' / 'Warning.vala',
     dependencies: [
         dependency('gtk+-3.0'),
-        dependency('granite')
+        dependency('granite'),
+        dependency('libhandy-1')
     ],
     install: true
 )
